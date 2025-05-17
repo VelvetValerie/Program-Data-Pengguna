@@ -49,18 +49,15 @@ int main() {
                 }
                 break;
             case 2:
-                char bakat[50];
-                char minat[50];
-
-                printf("Masukkan bakat Anda: ");
-                fgets(bakat, sizeof(bakat), stdin);
-
-                printf("Masukkan minat Anda: ");
-                fgets(minat, sizeof(minat), stdin);
-
-                printf("\n--- Bakat dan Minat ---\n");
-                printf("Bakat : %s", bakat);
-                printf("Minat : %s", minat);
+                 printf("\n--- Daftar Pengguna ---\n");
+                for (int i = 0; i < jumlah; i++) {
+                    printf("Pengguna %d:\n", i + 1);
+                    printf("Nama : %s", daftar[i].nama);
+                    printf("Umur : %d\n", daftar[i].umur);
+                    printf("Hobi : %s", daftar[i].hobi);
+                    printf("Bakat: %s", daftar[i].bakat);
+                    printf("Minat: %s\n", daftar[i].minat);
+                }
                 break;
             case 3:
                 printf("Terima kasih! Program selesai.\n");
