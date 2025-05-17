@@ -1,6 +1,18 @@
 #include <stdio.h>
 
+#define MAX_USER 100
+
+typedef struct {
+    char nama[50];
+    int umur;
+    char hobi[50];
+    char bakat[50];
+    char minat[50];
+} Pengguna;
+
 int main() {
+    Pengguna daftar[MAX_USER];
+    int jumlah = 0;
     int pilihan;
 
     do {
