@@ -11,6 +11,13 @@ typedef struct {
     char email[100];
 } Pengguna;
 
+void hapus_newline(char *str) {
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+}
+
 int main() {
     Pengguna daftar[MAX_USER];
     int jumlah = 0;
@@ -41,6 +48,7 @@ int main() {
 
                 printf("Masukkan nama: ");
                 fgets(daftar[jumlah].nama, sizeof(daftar[jumlah].nama), stdin);
+                hapus_newline(daftar[jumlah].nama);
 
                 printf("Masukkan umur: ");
                 fgets(umur_str, sizeof(umur_str), stdin);
@@ -48,15 +56,19 @@ int main() {
 
                 printf("Masukkan hobi: ");
                 fgets(daftar[jumlah].hobi, sizeof(daftar[jumlah].hobi), stdin);
+                hapus_newline(daftar[jumlah].hobi);
 
                 printf("Masukkan bakat: ");
                 fgets(daftar[jumlah].bakat, sizeof(daftar[jumlah].bakat), stdin);
+                hapus_newline(daftar[jumlah].bakat);
 
                 printf("Masukkan minat: ");
                 fgets(daftar[jumlah].minat, sizeof(daftar[jumlah].minat), stdin);
+                hapus_newline(daftar[jumlah].minat);
 
                 printf("Masukkan email : ");
                 fgets(daftar[jumlah].email, sizeof(daftar[jumlah].email), stdin);
+                hapus_newline(daftar[jumlah].email);
 
                 jumlah++;
                 printf("Data pengguna berhasil disimpan!\n");
@@ -68,12 +80,12 @@ int main() {
                  printf("\n--- Daftar Pengguna ---\n");
                 for (int i = 0; i < jumlah; i++) {
                     printf("Pengguna %d:\n", i + 1);
-                    printf("Nama : %s", daftar[i].nama);
+                    printf("Nama : %s\n", daftar[i].nama);
                     printf("Umur : %d\n", daftar[i].umur);
-                    printf("Hobi : %s", daftar[i].hobi);
-                    printf("Bakat: %s", daftar[i].bakat);
+                    printf("Hobi : %s\n", daftar[i].hobi);
+                    printf("Bakat: %s\n", daftar[i].bakat);
                     printf("Minat: %s\n", daftar[i].minat);
-                    printf("Email: %s", daftar[i].email);
+                    printf("Email: %s\n", daftar[i].email);
                 }
                 break;
             case 3:
