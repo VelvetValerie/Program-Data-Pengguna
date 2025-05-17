@@ -21,6 +21,7 @@ int main() {
         printf("1. Input Data Pengguna\n");
         printf("2. Tampilkan pengguna\n");
         printf("3. Keluar\n");
+        printf("4. Hubungi Perusahaan\n");
         printf("Pilih menu (1-3): ");
         scanf("%d", &pilihan);
 
@@ -66,6 +67,9 @@ int main() {
                 break;
             case 3:
                 printf("Terima kasih! Program selesai.\n");
+                break;
+            case 4:
+                printf("Hubungi kami di: info@perusahaan.com\n");
                 break;
             default:
                 printf("Pilihan tidak valid. Silakan coba lagi.\n");
