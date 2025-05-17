@@ -16,6 +16,13 @@ int main() {
     int jumlah = 0;
     int pilihan;
 
+    // Banner
+    printf("=====================================\n");
+    printf("||              PROGRAM DATA PENGGUNA           ||\n");
+    printf("||                  Versi 1.0 - C Language                    ||\n");
+    printf("||             Kontak: info@perusahaan.com            ||\n");
+    printf("=====================================\n");
+
     do {
         printf("\n=== MENU ===\n");
         printf("1. Input Data Pengguna\n");
