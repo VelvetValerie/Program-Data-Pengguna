@@ -35,12 +35,14 @@ int main() {
         switch (pilihan) {
             case 1:
                 if (jumlah < MAX_USER) {
+                    char umur_str[10]; // untuk input umur dalam bentuk string
+
                     printf("Masukkan nama: ");
                     fgets(daftar[jumlah].nama, sizeof(daftar[jumlah].nama), stdin);
 
                     printf("Masukkan umur: ");
-                    scanf("%d", &daftar[jumlah].umur);
-                    getchar();
+                    fgets(umur_str, sizeof(umur_str), stdin);
+                    sscanf(umur_str, "%d", &daftar[jumlah].umur);  // konversi ke int
 
                     printf("Masukkan hobi: ");
                     fgets(daftar[jumlah].hobi, sizeof(daftar[jumlah].hobi), stdin);
