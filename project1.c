@@ -8,6 +8,7 @@ typedef struct {
     char hobi[50];
     char bakat[50];
     char minat[50];
+    char email[100];
 } Pengguna;
 
 int main() {
@@ -42,6 +43,9 @@ int main() {
                     printf("Masukkan minat: ");
                     fgets(daftar[jumlah].minat, sizeof(daftar[jumlah].minat), stdin);
 
+                    printf("Masukkan email : ");
+                    fgets(daftar[jumlah].email, sizeof(daftar[jumlah].email), stdin);
+
                     jumlah++;
                     printf("Data pengguna berhasil disimpan!\n");
                 } else {
@@ -57,6 +61,7 @@ int main() {
                     printf("Hobi : %s", daftar[i].hobi);
                     printf("Bakat: %s", daftar[i].bakat);
                     printf("Minat: %s\n", daftar[i].minat);
+                    printf("Email: %s", daftar[i].email);
                 }
                 break;
             case 3:
