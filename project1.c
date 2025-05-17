@@ -35,32 +35,34 @@ int main() {
         switch (pilihan) {
             case 1:
                 if (jumlah < MAX_USER) {
-                    char umur_str[10]; // untuk input umur dalam bentuk string
+                char umur_str[10]; // untuk input umur dalam bentuk string
 
-                    printf("Masukkan nama: ");
-                    fgets(daftar[jumlah].nama, sizeof(daftar[jumlah].nama), stdin);
+                while (getchar() != '\n'); // buang newline dari input sebelumnya
 
-                    printf("Masukkan umur: ");
-                    fgets(umur_str, sizeof(umur_str), stdin);
-                    sscanf(umur_str, "%d", &daftar[jumlah].umur);  // konversi ke int
+                printf("Masukkan nama: ");
+                fgets(daftar[jumlah].nama, sizeof(daftar[jumlah].nama), stdin);
 
-                    printf("Masukkan hobi: ");
-                    fgets(daftar[jumlah].hobi, sizeof(daftar[jumlah].hobi), stdin);
+                printf("Masukkan umur: ");
+                fgets(umur_str, sizeof(umur_str), stdin);
+                sscanf(umur_str, "%d", &daftar[jumlah].umur);  // konversi ke int
 
-                    printf("Masukkan bakat: ");
-                    fgets(daftar[jumlah].bakat, sizeof(daftar[jumlah].bakat), stdin);
+                printf("Masukkan hobi: ");
+                fgets(daftar[jumlah].hobi, sizeof(daftar[jumlah].hobi), stdin);
 
-                    printf("Masukkan minat: ");
-                    fgets(daftar[jumlah].minat, sizeof(daftar[jumlah].minat), stdin);
+                printf("Masukkan bakat: ");
+                fgets(daftar[jumlah].bakat, sizeof(daftar[jumlah].bakat), stdin);
 
-                    printf("Masukkan email : ");
-                    fgets(daftar[jumlah].email, sizeof(daftar[jumlah].email), stdin);
+                printf("Masukkan minat: ");
+                fgets(daftar[jumlah].minat, sizeof(daftar[jumlah].minat), stdin);
 
-                    jumlah++;
-                    printf("Data pengguna berhasil disimpan!\n");
-                } else {
-                    printf("Kapasitas pengguna penuh!\n");
-                }
+                printf("Masukkan email : ");
+                fgets(daftar[jumlah].email, sizeof(daftar[jumlah].email), stdin);
+
+                jumlah++;
+                printf("Data pengguna berhasil disimpan!\n");
+            } else {
+                printf("Kapasitas pengguna penuh!\n");
+            }
                 break;
             case 2:
                  printf("\n--- Daftar Pengguna ---\n");
