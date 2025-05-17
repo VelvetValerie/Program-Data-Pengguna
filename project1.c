@@ -17,34 +17,36 @@ int main() {
 
     do {
         printf("\n=== MENU ===\n");
-        printf("1. Data Diri\n");
-        printf("2. Bakat dan Minat\n");
-        printf("3. Tampilkan Biodata");
-        printf("4. Keluar\n");
+        printf("1. Input Data Pengguna\n");
+        printf("2. Tampilkan pengguna\n");
+        printf("3. Keluar\n");
         printf("Pilih menu (1-3): ");
         scanf("%d", &pilihan);
 
         switch (pilihan) {
             case 1:
-                char nama[50];
-                int umur;
-                char hobi[50];
+                if (jumlah < MAX_USER) {
+                    printf("Masukkan nama: ");
+                    fgets(daftar[jumlah].nama, sizeof(daftar[jumlah].nama), stdin);
 
-                printf("Masukkan nama: ");
-                fgets(nama, sizeof(nama), stdin);
+                    printf("Masukkan umur: ");
+                    scanf("%d", &daftar[jumlah].umur);
+                    getchar();
 
-                printf("Masukkan umur: ");
-                scanf("%d", &umur);
-                getchar(); // membersihkan newline sisa input
+                    printf("Masukkan hobi: ");
+                    fgets(daftar[jumlah].hobi, sizeof(daftar[jumlah].hobi), stdin);
 
-                printf("Masukkan hobi: ");
-                fgets(hobi, sizeof(hobi), stdin);
+                    printf("Masukkan bakat: ");
+                    fgets(daftar[jumlah].bakat, sizeof(daftar[jumlah].bakat), stdin);
 
-                // Menampilkan hasil
-                printf("\n--- Perkenalan Diri ---\n");
-                printf("Nama : %s", nama);
-                printf("Umur : %d tahun\n", umur);
-                printf("Hobi : %s", hobi);
+                    printf("Masukkan minat: ");
+                    fgets(daftar[jumlah].minat, sizeof(daftar[jumlah].minat), stdin);
+
+                    jumlah++;
+                    printf("Data pengguna berhasil disimpan!\n");
+                } else {
+                    printf("Kapasitas pengguna penuh!\n");
+                }
                 break;
             case 2:
                 char bakat[50];
