@@ -18,9 +18,9 @@ int main() {
 
     // Banner
     printf("=====================================\n");
-    printf("||              PROGRAM DATA PENGGUNA           ||\n");
-    printf("||                  Versi 1.0 - C Language                    ||\n");
-    printf("||             Kontak: info@perusahaan.com            ||\n");
+    printf("||     PROGRAM DATA PENGGUNA       ||\n");
+    printf("||       Versi 1.0 - C Language     ||\n");
+    printf("||     Kontak: info@perusahaan.com ||\n");
     printf("=====================================\n");
 
     do {
